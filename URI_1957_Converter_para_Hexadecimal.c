@@ -29,25 +29,27 @@ int main() {
 }
 
 void printa_hex(int num) {
-    if (num < 10) {
-            printf("%d", num);
-        }
-        else if (num == 10) {
+    switch (num) {
+        case 10:
             printf("A");
-        }
-        else if (num == 11) {
+            break;
+        case 11:
             printf("B");
-        }
-        else if (num == 12) {
+            break;
+        case 12:
             printf("C");
-        }
-        else if (num == 13) {
+            break;
+        case 13:
             printf("D");
-        }
-        else if (num == 14) {
+            break;
+        case 14:
             printf("E");
-        }
-        else {
+            break;
+        case 15:
             printf("F");
-        }
+            break;
+        default:
+            printf("%d", num);
+            break;
+    }
 }
